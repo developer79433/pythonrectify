@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+import sys
 import math
 import numpy as np
 import cv2 as cv
@@ -136,6 +137,21 @@ def processImage(image):
 		warped = four_point_transform(image, quadrilateral)
 		showImage("Rectified", warped)
 
+def processCamera():
+	cap = cv.VideoCapture(0)
+	if not cap.isOpened():
+		print("Cannot open camera")
+		return
+	ret, frame = cap.read()
+	if not ret:
+		print("Cannot grab frame from camera")
+		return
+	processImage(frame)
+
 if __name__ == "__main__":
-	img = cv.imread('input.jpg')
-	processImage(img)
+	if len(sys.argv) > 1:
+		for filename in sys.argv[1:]:
+			img = cv.imread(filename)
+			processImage(img)
+	else:
+		processCamera()
