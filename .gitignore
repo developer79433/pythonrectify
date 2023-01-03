@@ -1,6 +1,7 @@
-sudokuimageprocessor/resources/sudokutrainingdigits
+sudokuimageprocessor/resources/sudokutrainingdigits/*
+sudokuimageprocessor/resources/sudokutrainingdigits/loader.py
 !sudokuimageprocessor/resources/sudokutrainingdigits/archive.zip
 *.npz
 __pycache__/
-sudokuimageprocessor/resources/testdata
+sudokuimageprocessor/resources/testdata/*
 !sudokuimageprocessor/resources/testdata/.gitkeep
