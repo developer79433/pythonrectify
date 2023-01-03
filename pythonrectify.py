@@ -136,6 +136,7 @@ def processImage(image):
 		quadrilateral = [ point[0] for point in quadrilateral ]
 		warped = four_point_transform(image, quadrilateral)
 		showImage("Rectified", warped)
+	return warped
 
 def processCamera():
 	cap = cv.VideoCapture(0)

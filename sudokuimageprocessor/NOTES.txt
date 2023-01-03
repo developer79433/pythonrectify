@@ -1,0 +1,13 @@
+# Tesseract
+
+If using Tesseract, the following options/flags have been tried for single character recognition.
+
+Use params
+  --psm 10
+  -l osd
+
+Explanation
+  --psm 10 for single char recognition
+  -l osd ???
+
+/c/Program\ Files/Tesseract-OCR/tesseract.exe -l osd --psm 10 cut.tiff out
